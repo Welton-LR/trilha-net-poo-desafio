@@ -3,21 +3,24 @@ namespace DesafioPOO.Models
     // Herdando da classe "Smartphone"
     public class Iphone : Smartphone
     {
-        // Adicionando propriedades específicas do iPhone
-        public string Modelo { get; set; }
         public string SistemaOperacional { get; set; }
 
         // Construtor que recebe parâmetros específicos do iPhone
-        public Iphone(string numero, string modelo, string sistemaOperacional) : base(numero)
+        public Iphone (string numero, string modelo, string imei, string memoria, string sistema) : base(numero)
         {
             Modelo = modelo;
-            SistemaOperacional = sistemaOperacional;
+            Numero = numero;
+            IMEI = imei;
+            Memoria = memoria;
+            SistemaOperacional = sistema;
+            
+            
         }
 
         // Sobrescrevendo o método InstalarAplicativo
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.WriteLine($"Instalando aplicativo {nomeApp} no iPhone {Modelo} com SO {SistemaOperacional}");
+            Console.WriteLine($"Instalando aplicativo {nomeApp} no iPhone {Modelo} com Sistema Operacional {SistemaOperacional}");
         }
 
         // Outros métodos específicos do iPhone, se necessário

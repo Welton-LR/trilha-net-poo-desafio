@@ -3,13 +3,15 @@ namespace DesafioPOO.Models
     // Herdando da classe "Smartphone"
     public class Nokia : Smartphone
     {
-        // Adicionando propriedade específica do Nokia
-        public string Modelo { get; set; }
-
-        // Construtor que recebe parâmetros específicos do Nokia
-        public Nokia(string numero, string modelo) : base(numero)
+         // Construtor que recebe parâmetros específicos do Nokia
+        public Nokia(string numero, string modelo, string imei, string memoria) : base(numero)
         {
             Modelo = modelo;
+            Numero = numero;
+            IMEI = imei;
+            Memoria = memoria;
+            
+            
         }
 
         // Sobrescrevendo o método InstalarAplicativo
@@ -18,6 +20,6 @@ namespace DesafioPOO.Models
             Console.WriteLine($"Instalando aplicativo {nomeApp} no Nokia {Modelo}");
         }
 
-        // Outros métodos específicos do Nokia, se necessário
+        
     }
 }
